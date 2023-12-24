@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #cat-image {
+            font-size: 36px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cat Game</h1>
+    <p id="cat-image"></p>
+
+    <script>
+        function showCatPicture() {
+            // Ask if the user wants to see a cat picture
+            var response = prompt("Do you want to see a picture of a cat? (yes/ok/fine)");
+
+            // Check the user's response
+            if (["yes", "ok", "fine"].includes(response.toLowerCase())) {
+                // Display an emoji cat
+                document.getElementById("cat-image").innerText = "Here's a cat: 😺";
+            } else {
+                // Convince the user to look at the cat
+                alert("Aw, come on! Cats are adorable. Just take a peek!");
+
+                // Ask again for confirmation
+                response = prompt("Do you really not want to see a cat? (yes/ok/fine)");
+
+                // Check the user's response again
+                if (["yes", "ok", "fine"].includes(response.toLowerCase())) {
+                    alert("Alright, maybe next time then.");
+                } else {
+                    alert("You have to play the cat game! The gods demand it!");
+                }
+            }
+        }
+
+        // Call the function to show the cat picture
+        showCatPicture();
+    </script>
+
+</body>
+</html>
